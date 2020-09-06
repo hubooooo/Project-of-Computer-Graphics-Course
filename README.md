@@ -17,8 +17,9 @@ mesh->setShowEdges(true);
 mesh->setShowTriangles(false);
 mesh->setShowEdges(true);
 
- 
-图2.7 边缘显示
+![image](https://github.com/hubooooo/Project-of-Computer-Graphics-Course/blob/master/%E8%BE%B9%E7%BC%98%E6%98%BE%E7%A4%BA.png)
+
+边缘显示
 
 
 表面法向显示实现代码：
@@ -31,7 +32,9 @@ mesh->setNormalsProperties(0.01, color);
 //显示表面法线
 mesh->setShowNormals(true);
  
-图2.8 表面法向量显示
+![image](https://github.com/hubooooo/Project-of-Computer-Graphics-Course/blob/master/%E8%A1%A8%E9%9D%A2%E6%B3%95%E5%90%91%E9%87%8F%E6%98%BE%E7%A4%BA.png)
+
+表面法向量显示
 
 
 模型包围盒显示实现代码：
@@ -45,8 +48,9 @@ mesh->setShowNormals(true);
         cColorf colorEdges;
         colorEdges.setBlack();m_mesh->setEdgeProperties(1, colorEdges);
  
+ ![image](https://github.com/hubooooo/Project-of-Computer-Graphics-Course/blob/master/%E5%8C%85%E5%9B%B4%E7%9B%92%E6%98%BE%E7%A4%BA.png)
  
-图2.9 包围盒显示
+包围盒显示
 
 
 模型网格显示实现代码：
@@ -55,7 +59,9 @@ mesh->setWireMode(true);
 //启用实体渲染模式
 mesh->setWireMode(false);
  
-图2.10 网格显示
+![image](https://github.com/hubooooo/Project-of-Computer-Graphics-Course/blob/master/%E7%BD%91%E6%A0%BC%E6%98%BE%E7%A4%BA.png)
+ 
+网格显示
 
 虚拟手术仿真功能实现
 
@@ -66,7 +72,9 @@ mesh->setWireMode(false);
 
 所开发的软件能实现与触觉设备omega.x的交互，该触觉设备携带手腕以及触笔，则其手柄的方向通过使用旋转矩阵来表示，共有六个自由度。
  
-图2.11 触觉设备omega.x
+![image](https://github.com/hubooooo/Project-of-Computer-Graphics-Course/blob/master/%E8%A7%A6%E8%A7%89%E8%AE%BE%E5%A4%87.png)
+ 
+触觉设备omega
 
 软件与触觉设备omega.x交互的实现代码：
 	// 创建触觉设备手柄
@@ -96,6 +104,7 @@ mesh->setWireMode(false);
     m_world->addChild(m_mesh);
 m_world->addChild(m_point);
 
+
 虚拟手术器械
 
 要实现虚拟手术器械工具的真实操作体感，需要将器械模型与虚拟世界的工具相结合。工具是3D对象，用于在虚拟世界中连接，建模和显示触觉设备。工具由称为触觉点（cHapticPoint）的一个或多个接触球以图形方式建模，其模拟触觉设备与环境之间的交互。计算触觉点和环境之间的相互作用力的一组力渲染算法（cAlgorithmFingerProxy和cAlgorithmPotentialField）与每个触觉点（cHapticPoint）相关联。遇到的对象类型决定了使用哪种强制渲染算法。一旦在工具的每个触觉点处计算了所有接触力，所产生的力被组合在一起并且被转换成发送到触觉设备的力，扭矩和夹持力。
@@ -117,18 +126,26 @@ mesh-> m_material-> setStaticFriction（0.3）;
 mesh-> m_material-> setDynamicFriction（0.4）;
 
  
-图2.12 虚拟手术器械
+ 
+![image](https://github.com/hubooooo/Project-of-Computer-Graphics-Course/blob/master/%E8%99%9A%E6%8B%9F%E6%89%8B%E6%9C%AF%E5%99%A8%E6%A2%B0.jpg)
+
+虚拟手术器械
+
 
 虚拟手术仿真
 
 医生在完成被手术对象的模型导入后，可以选择所需的手术操作器械，如锥子、手术刀、手术钻等。
+
+![image](https://github.com/hubooooo/Project-of-Computer-Graphics-Course/blob/master/%E8%99%9A%E6%8B%9F%E6%89%8B%E6%9C%AF%E4%BB%BF%E7%9C%9F.png)
  
-图2.13 虚拟手术仿真
+虚拟手术仿真
 
 
 交互设计
 交互设计的思维方法建构于工业设计以用户为中心的方法，同时加以发展，更多地面向行为和过程，把产品看作一个事件，强调过程性思考的能力，流程图与状态转换图和故事板等成为重要设计表现手段，更重要的是掌握软件和硬件的原型实现的技巧方法和评估技术。
 所设计的软件菜单有相关操作指示，方便用户使用。
+
+![image](https://github.com/hubooooo/Project-of-Computer-Graphics-Course/blob/master/%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A2.png)
  
 交互界面 
 
